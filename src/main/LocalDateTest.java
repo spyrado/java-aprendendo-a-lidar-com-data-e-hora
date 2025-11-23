@@ -1,6 +1,7 @@
 package main;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class LocalDateTest {
   public static void main(String[] args) {
@@ -30,5 +31,14 @@ public class LocalDateTest {
     System.out.println("Data segunda parcela: " + dataSegundaParcela);
 
     System.out.println("=============== [FIM] LOGANDO AS DATAS ===============");
+
+
+    System.out.println("=============== [INICIO] FORMATANDO AS DATAS ===============");
+    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    System.out.println("Data atual: " + formato.format(dataAtual));
+    System.out.println("Data compra: " + formato.format(dataCompra));
+    System.out.println("Data primeira parcela: " + formato.format(dataPrimeiraParcela));
+    System.out.println("Data segunda parcela: " + formato.format(dataSegundaParcela));
+    System.out.println("=============== [FIM] FORMATANDO AS DATAS ===============");
   }
 }
